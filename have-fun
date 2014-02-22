@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+ruby keycatcher.rb | ruby translator.rb | ruby speaker.rb

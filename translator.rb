@@ -1,25 +1,16 @@
-def mappings
-  { r: :red,
-    b: :blue,
-    g: :green,
-    s: :square,
-    t: :triangle,
-    p: :pentagon,
-  }
+def rubric
+  @memo ||= Hash[open("./rubric.txt").readlines.map(&:split)]
 end
 
 def translate(line)
-  line.gsub!(/\s/, '')
-
-  mappings[line.to_sym]
+  rubric[line.chars.first]
 end
 
 STDIN.each do |line|
   line.gsub!(/\s/, '')
 
   if (result = translate(line))
-    print "#{line} -> #{result}\r\n"
+    print "#{result}\r\n"
     STDOUT.flush
-    `espeak #{result}`
   end
 end
