@@ -9,13 +9,14 @@ work do
   @rolling = false # is this doing anything?
   heading  = 0
   distance = 90
-  sides    = 4
+  sides    = 6
 
   sides.times do
     puts "Rolling #{distance} units at heading #{heading}..."
-    sphero.set_color COLORS.sample
+    #sphero.set_color COLORS.sample
     sphero.roll distance, heading
     heading += (360 / sides)
     sleep 3
   end
+  break
 end
