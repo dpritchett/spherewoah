@@ -1,0 +1,8 @@
+r	red
+y	yellow
+g	green
+b	blue
+w   forward
+a   left
+s   right
+d   reverse

@@ -1,9 +1,9 @@
-def rubric
-  @memo ||= Hash[open("./rubric.txt").readlines.map(&:split)]
+def translations
+  @memo ||= Hash[open("./translations.txt").readlines.map(&:split)]
 end
 
 def translate(line)
-  rubric[line.chars.first]
+  translations[line.chars.first]
 end
 
 STDIN.each do |line|

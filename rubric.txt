@@ -1,3 +1,0 @@
-w red
-a yellow
-s green
